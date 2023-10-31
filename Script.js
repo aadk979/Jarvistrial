@@ -11,6 +11,7 @@ const completion = await openai.createChatCompletion({
 		model: "gpt-3.5-turbo",
 		messages: [
 			{role: "user", content: "define javascript"},
+        ]
 })
             
 console. log (completion.data.choices[0].message);
