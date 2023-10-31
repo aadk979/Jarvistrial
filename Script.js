@@ -59,7 +59,7 @@ function kill(){
 io.on("connection", (socket) => {
     socket.on("server-kill" , (data) =>{
       if (data.akc === "I like amelie" && data.acc === "260908180608"){
-       kill();
+       
       }else{
         io.emit("server" , "Authentication failed , unable to shutdown server");
       }
