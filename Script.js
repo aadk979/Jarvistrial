@@ -1,4 +1,4 @@
-const express = require("express");
+#const express = require("express");
 const app = express();
 const http = require("http");
 const { Server } = require("socket.io");
@@ -8,8 +8,10 @@ import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
     organization: "org-A607kOg9mazKTmUZKRiaMTxo",
-    apiKey: "",// // Replace with your actual API key
+    apiKey: "sk-G2yBWV9PjkR8yOXHeHiT3BlbkFJ4TNWG6TO0aliLrBjg3TD",// // Replace with your actual API key
 });
+
+//sk-G2yBWV9PjkR8yOXHeHiT3BlbkFJ4TNWG6TO0aliLrBjg3TD
 
 const openai = new OpenAIApi(configuration);
 
