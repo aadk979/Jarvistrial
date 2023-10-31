@@ -3,24 +3,14 @@ const app = express();
 const http = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
-
 import { Configuration, OpenAIApi } from "openai";
-
 const configuration = new Configuration({
     organization: "org-A607kOg9mazKTmUZKRiaMTxo",
-    apiKey: "sk-G2yBWV9PjkR8yOXHeHiT3BlbkFJ4TNWG6TO0aliLrBjg3TD",// // Replace with your actual API key
+    apiKey: "sk-G2yBWV9PjkR8yOXHeHiT3BlbkFJ4TNWG6TO0aliLrBjg3TD",
 });
-
-//sk-G2yBWV9PjkR8yOXHeHiT3BlbkFJ4TNWG6TO0aliLrBjg3TD
-
 const openai = new OpenAIApi(configuration);
+const response = await openai.listEngines();
 
-try {
-    const response = await openai.listEngines();
-    console.log(response.data);
-} catch (error) {
-    console.error("Error:", error);
-}
 
 
 const server = http.createServer(app);
